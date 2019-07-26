@@ -1,0 +1,11 @@
+<h1>POSTS</h1>
+
+<span *ngIf="title.touched && title.invalid">Title is required</span> <br>
+<span *ngIf="body.touched && body.invalid">Body is required</span> <br>
+
+
+<form [formGroup]="frmPosts" (ngSubmit)="submitForm($event)">
+  <input type="text" formControlName="title" placeholder="title"><br>
+  <textarea rows="5" cols="10" formControlName="body"></textarea><br>
+  <input type="submit" value="Submit">
+</form>
